@@ -1,0 +1,47 @@
+TABELAS
+
+1. produto
+2. fornecedor
+3. cliente
+4. funcionario
+5. venda
+6. estoque
+7. usuario
+8. item_venda
+9. categoria
+10. pedido_compra
+11. item_compra
+12. movimentacao
+13. endereco
+14. produto_fornecedor
+
+--
+
+RELACIONAMENTOS
+
+-- 2x 1:1
+estoque ↔ produto (1:1)
+usuario ↔ funcionario (1:1)
+
+-- 1x n:n
+produto ↔ fornecedor (n:n) via produto_fornecedor
+
+-- 7x 1:n
+categoria 1:n produto
+cliente 1:n venda
+funcionario 1:n venda
+venda 1:n item_venda
+fornecedor 1:n pedido_compra
+pedido_compra 1:n item_compra
+produto 1:n movimentacao
+
+--
+
+335 INSERTS
+
+produto: 100+ registros
+fornecedor: 50+ registros
+cliente: 80+ registros
+funcionario: 30+ registros
+venda: 75+ registros (2024-2025)
+TOTAL: 335+ inserts ✅
