@@ -1,0 +1,54 @@
+REQUISITOS:
+- 14 tabelas
+- 2 relacionamentos 1:1
+- 1 relacionamento n:n
+- 335+ inserts
+- Período: 2024-2025
+
+---
+
+- Projeto deve ter no máximo 4 alunos.
+
+- Projeto no mínimo 14 tabelas:
+
+- Mínimo de relacionamento
+ 2 > 1:1
+1 > n:n
+7 deve ter 1:n
+
+- as tabelas principais deve ter no minimo 335 inserts [ Somados ].
+
+- as tabelas principais deve ter registro de 1 ano (2024-2025)
+
+- o assunto deve ser coerente!
+
+- o primeiro dia de apresentação será [ 26-11 ] as 19h esse dia, Todos os sqls, deve ser commitados.
+- commits feitos depois da data será anulados.
+
+- a ordem das Pessoas, não vai ser por grupo e sim por aluno a apresentação. será sorteados na HORA, dia 26-11, então todos os alunos devem está presentes.
+
+- Tema livre
+
+- o código sql só vale 1 ponto
+
+- a minha consulta sql vai valer 7 pontos
+
+- voces devem ter 14 consultas que não sejam Simples, ex: select * from where id > 1;
+
+- das 14 -> 9 deve ter joins, e dessas 9, 2 consultas devem ter no minimo 5 joins.
+
+- das 14 consultas acima, eu vou sortear na hora 5 consultas, e voce pode escolher a sua.
+
+- As suas consultas deve ter numero e titulo [ Ex: consulta 3 -> lista os pedidos via pix para arcoverde ]
+
+- se voce não conseguir fazer, pode escolher mais 3 vezes para alterar o sorteio.
+
+- das cosultas acima se voces acertarem ela vai complementar os 2 pontos que faltam.
+
+- voces tem 6 errors, para acertar.
+
+- eu vou aceitar pouco do que foi escrito no sql,
+
+- a apresentação pode ocorrer em paralelo com mais de 1 grupo, pq apenas o código é em grupo, então, vamos ter 3 pessoas apresentando em paralelo.
+
+- Tempo máximo de cada aluno para apresentar - 20 minutos.

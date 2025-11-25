@@ -1,0 +1,16 @@
+CONSULTAS PARA A PROVA
+
+CONSULTA 1: Produtos com estoque baixo e seus fornecedores
+CONSULTA 2: Vendas do último mês com nome dos clientes
+CONSULTA 3: Lista de produtos com suas categorias
+CONSULTA 4: Clientes ordenados por total gasto
+CONSULTA 5: Funcionários e quantidade de vendas (5 JOINS)
+CONSULTA 6: Produtos que nunca foram vendidos
+CONSULTA 7: Fornecedores e quantos produtos fornecem
+CONSULTA 8: Vendas agrupadas por mês
+CONSULTA 9: Produtos com preço acima da média
+CONSULTA 10: Detalhes completos das vendas (5 JOINS)
+CONSULTA 11: Estoque com dados de fornecedor
+CONSULTA 12: Produtos entre 50 e 500 reais
+CONSULTA 13: Vendas acima de 1000 reais em 2024
+CONSULTA 14: Clientes agrupados por cidade
