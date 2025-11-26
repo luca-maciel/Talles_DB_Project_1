@@ -1,4 +1,4 @@
-CREATE TABLE categoria (
+CREATE TABLE IF NOT EXISTS categoria (
                            id SERIAL PRIMARY KEY,
                            nome VARCHAR(100) NOT NULL UNIQUE,
                            descricao TEXT,
@@ -6,7 +6,7 @@ CREATE TABLE categoria (
 );
 
 
-CREATE TABLE fornecedor (
+CREATE TABLE IF NOT EXISTS fornecedor (
                             id SERIAL PRIMARY KEY,
                             nome VARCHAR(200) NOT NULL,
                             cnpj VARCHAR(18) UNIQUE,
@@ -19,7 +19,7 @@ CREATE TABLE fornecedor (
 );
 
 
-CREATE TABLE produto (
+CREATE TABLE IF NOT EXISTS produto (
                          id SERIAL PRIMARY KEY,
                          nome VARCHAR(200) NOT NULL,
                          descricao TEXT,
@@ -34,7 +34,7 @@ CREATE TABLE produto (
 );
 
 
-CREATE TABLE cliente (
+CREATE TABLE IF NOT EXISTS cliente (
                          id SERIAL PRIMARY KEY,
                          nome VARCHAR(200) NOT NULL,
                          cpf VARCHAR(14) UNIQUE,
@@ -44,7 +44,7 @@ CREATE TABLE cliente (
 );
 
 
-CREATE TABLE funcionario (
+CREATE TABLE IF NOT EXISTS funcionario (
                              id SERIAL PRIMARY KEY,
                              nome VARCHAR(200) NOT NULL,
                              cpf VARCHAR(14) UNIQUE,
@@ -57,7 +57,7 @@ CREATE TABLE funcionario (
 );
 
 
-CREATE TABLE venda (
+CREATE TABLE IF NOT EXISTS venda (
                        id SERIAL PRIMARY KEY,
                        numero_venda VARCHAR(20) UNIQUE NOT NULL,
                        data_venda TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -69,7 +69,7 @@ CREATE TABLE venda (
 );
 
 
-CREATE TABLE item_venda (
+CREATE TABLE IF NOT EXISTS item_venda (
                             id SERIAL PRIMARY KEY,
                             venda_id INTEGER NOT NULL,
                             produto_id INTEGER NOT NULL,
@@ -79,7 +79,7 @@ CREATE TABLE item_venda (
 );
 
 
-CREATE TABLE estoque (
+CREATE TABLE IF NOT EXISTS estoque (
                          id SERIAL PRIMARY KEY,
                          produto_id INTEGER UNIQUE NOT NULL,
                          quantidade INTEGER DEFAULT 0 CHECK (quantidade >= 0),
@@ -90,7 +90,7 @@ CREATE TABLE estoque (
 );
 
 
-CREATE TABLE usuario (
+CREATE TABLE IF NOT EXISTS usuario (
                          id SERIAL PRIMARY KEY,
                          username VARCHAR(50) UNIQUE NOT NULL,
                          senha VARCHAR(255) NOT NULL,
@@ -101,7 +101,7 @@ CREATE TABLE usuario (
 );
 
 
-CREATE TABLE pedido_compra (
+CREATE TABLE IF NOT EXISTS pedido_compra (
                                id SERIAL PRIMARY KEY,
                                numero_pedido VARCHAR(20) UNIQUE NOT NULL,
                                fornecedor_id INTEGER NOT NULL,
@@ -114,7 +114,7 @@ CREATE TABLE pedido_compra (
 );
 
 
-CREATE TABLE item_pedido_compra (
+CREATE TABLE IF NOT EXISTS item_pedido_compra (
                                     id SERIAL PRIMARY KEY,
                                     pedido_id INTEGER NOT NULL,
                                     produto_id INTEGER NOT NULL,
@@ -124,7 +124,7 @@ CREATE TABLE item_pedido_compra (
 );
 
 
-CREATE TABLE movimentacao_estoque (
+CREATE TABLE IF NOT EXISTS movimentacao_estoque (
                                       id SERIAL PRIMARY KEY,
                                       produto_id INTEGER NOT NULL,
                                       tipo_movimentacao VARCHAR(20) NOT NULL CHECK (tipo_movimentacao IN ('ENTRADA', 'SAIDA', 'AJUSTE')),
@@ -136,7 +136,7 @@ CREATE TABLE movimentacao_estoque (
 );
 
 
-CREATE TABLE endereco (
+CREATE TABLE IF NOT EXISTS endereco (
                           id SERIAL PRIMARY KEY,
                           cliente_id INTEGER NOT NULL,
                           tipo_endereco VARCHAR(20) DEFAULT 'RESIDENCIAL' CHECK (tipo_endereco IN ('RESIDENCIAL', 'COMERCIAL', 'ENTREGA')),
@@ -151,7 +151,7 @@ CREATE TABLE endereco (
 );
 
 
-CREATE TABLE produto_fornecedor (
+CREATE TABLE IF NOT EXISTS produto_fornecedor (
                                     id SERIAL PRIMARY KEY,
                                     produto_id INTEGER NOT NULL,
                                     fornecedor_id INTEGER NOT NULL,
