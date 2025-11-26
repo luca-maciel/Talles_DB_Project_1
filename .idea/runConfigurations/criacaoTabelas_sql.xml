@@ -2,6 +2,7 @@
   <configuration default="false" name="criacaoTabelas.sql" type="DatabaseScript" editBeforeRun="true" focusToolWindowBeforeRun="true" singleton="false" nameIsGenerated="true">
     <script-file value="$PROJECT_DIR$/sql/criacaoTabelas.sql" />
     <script-mode>FILE</script-mode>
+    <data-source id="a0f97a19-a110-483e-8b00-e8f2e81ffc77" />
     <method v="2" />
   </configuration>
 </component>
